@@ -92,6 +92,11 @@ form button:hover {
   font-size: 1rem;
 }
 
+.trash-btn:hover {
+  color: #ff6f47;
+  background: white;
+}
+
 .edit-btn {
   background: blue;
 }
@@ -99,9 +104,19 @@ form button:hover {
 .edit-btn:active {
     background: royalblue;
 }
+
+.edit-btn:hover {
+  background: white;
+  color: blue;
+}
   
 .complete-btn {
   background: rgb(73, 204, 73);
+}
+
+.complete-btn:hover {
+  color: rgb(73, 204, 73);
+  background: white;
 }
 
 .todo-item {
