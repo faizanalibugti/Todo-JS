@@ -1,0 +1,147 @@
+/* Border box declaration 
+https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+html {
+  box-sizing: border-box;
+}
+/* inherit border-box on all elements in the universe and before and after
+     */
+*,
+*:before,
+*:after {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: inherit;
+}
+
+body {
+  background: linear-gradient(90deg, #00c9ff 0%, #92fe9d 100%);
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
+
+header,
+form {
+  min-height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form input,
+form button {
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  border: none;
+  background: white;
+}
+
+form button {
+  color: #00c9ff;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  color: white;
+  background: #00c9ff;
+}
+
+.warning {
+    color: red;
+    background: rgb(233, 150, 150);
+    margin: 0 500px;
+    visibility: hidden;
+}
+
+.todo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo-list {
+  min-width: 30%;
+  list-style: none;
+}
+
+.todo {
+  margin: 0.5rem;
+  background: white;
+  color: black;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+.todo li {
+  flex: 1;
+}
+
+.edit-btn,
+.trash-btn,
+.complete-btn {
+  color: white;
+  background: #ff6f47;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.edit-btn {
+  background: blue;
+}
+
+.edit-btn:active {
+    background: royalblue;
+}
+  
+.complete-btn {
+  background: rgb(73, 204, 73);
+}
+
+.todo-item {
+  padding: 0em 0.5em;
+}
+
+.icon {
+  pointer-events: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.fall {
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+/* Edit Task */
+li > label {
+  font-size: 18px;
+  line-height: 40px;
+  width: 237px;
+  padding: 0 0 0 11px;
+}
+
+li > input[type="text"] {
+  width: 226px;
+}
+
+li input[type="text"] {
+  display: none;
+}
+
+li.editMode input[type="text"] {
+  display: block;
+}
+
+li.editMode label {
+  display: none;
+}
